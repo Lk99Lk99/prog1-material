@@ -29,3 +29,46 @@ func BinFind1(l []int, x int) int {
 	}
 	return -1
 }
+
+func BinFind2(l []int, x int) int {
+	links := 0       // Hier beginnt der interessante Teil der Liste.
+	rechts := len(l) // Hier endet der interessante Teil der Liste.
+	for rechts > links {
+		mitte := (rechts-links)/2 + links
+
+		if x == l[mitte] {
+			return mitte
+		}
+		if x < l[mitte] {
+			rechts = mitte
+		} else {
+			links = mitte + 1
+		}
+	}
+	return -1
+}
+
+func BinFindRek(l []int, x int) int {
+	if len(l) == 0 {
+		return -1
+	}
+
+	mitte := len(l) / 2
+
+	if x == l[mitte] {
+		return mitte
+	}
+	if x < l[mitte] {
+		// Suche im linken Teil weiter
+		return BinFindRek(l[:mitte], x)
+	}
+	if x > l[mitte] {
+		// Suche im rechten Teil weiter
+		result := BinFindRek(l[mitte+1:], x)
+		if result == -1 {
+			return -1
+		}
+		return result + mitte + 1
+	}
+	return -1
+}
