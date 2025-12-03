@@ -1,4 +1,4 @@
-package maumau
+package card
 
 import (
 	"fmt"
@@ -36,4 +36,11 @@ func (c Card) Picture() string {
 		"└─────────┘",
 	}
 	return strings.Join(lines, "\n")
+}
+
+// Matches erwartet eine zweite Karte und liefert true,
+// falls diese zur aktuellen Karte passt.
+func (c Card) Matches(o Card) bool {
+	// TODO
+	return true
 }
