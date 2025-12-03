@@ -64,9 +64,9 @@ func (p ChessPiece) MoveAllowed(row, col int) bool {
 			return true
 		}
 		if row-col == p.row-p.column {
-			return true
-		}
-		if row+col == p.row+p.column {
+		return true
+	}
+	if row+col == p.row+p.column {
 			return true
 		}
 
