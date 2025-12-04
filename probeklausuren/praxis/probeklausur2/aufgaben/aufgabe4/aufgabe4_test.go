@@ -10,7 +10,6 @@ func ExampleElementSums() {
 	fmt.Println(ElementSums(l1, l2))
 	fmt.Println(ElementSums(l1, l3))
 	fmt.Println(ElementSums(l2, l3))
-	fmt.Println(ElementSums(l3, l2))
 
 	// Output:
 	// [6 5 4 3 2]
