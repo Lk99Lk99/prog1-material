@@ -11,6 +11,7 @@ MAX. PUNKTE: 10
 // Gibt es mehrere solche Einträge, soll nur der erste ersetzt werden.
 func ReplaceEn(dict []Entry, de, en string) {
 	// TODO
+
 }
 
 // Entry repräsentiert einen Eintrag in einem Wörterbuch

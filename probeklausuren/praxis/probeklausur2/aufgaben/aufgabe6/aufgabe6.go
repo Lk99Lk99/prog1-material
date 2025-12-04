@@ -13,5 +13,25 @@ package aufgabe6
 func DuplicateSinglets(list []int) []int {
 	result := []int{}
 	// TODO
+	for i := range list {
+
+		if !IsSingle(list, list[i]) {
+			result = append(result, list[i], list[i])
+		} else {
+			result = append(result, list[i])
+		}
+
+	}
+
 	return result
+}
+
+func IsSingle(list []int, n int) bool {
+	count := 0
+	for i := range list {
+		if list[i] == n {
+			count++
+		}
+	}
+	return count >= 2
 }
