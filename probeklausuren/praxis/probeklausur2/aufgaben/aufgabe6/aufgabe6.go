@@ -28,8 +28,8 @@ func DuplicateSinglets(list []int) []int {
 
 func IsSingle(list []int, n int) bool {
 	count := 0
-	for i := range list {
-		if list[i] == n {
+	for _, i := range list {
+		if i == n {
 			count++
 		}
 	}

@@ -10,14 +10,18 @@ package aufgabe2
 func FilterDigits(s string) string {
 	result := ""
 	// TODO
-
+	lol := ""
 	for i := 0; i < len(s); i++ {
-		//	if s[i] == 0 ||s[i] == 1 ||s[i] == 2 ||s[i] == 3 ||s[i] == 4 ||s[i] == 5 ||s[i] == 6 ||s[i] == 7||s[i] == 8 ||s[i] == 9 {
 
-		//	}
-		result = append(result, s[i])
+		if s[i] >= '0' && s[i] <= '9' {
+			result = result + lol
 
-		//}
+		} else {
+
+			result = result + string(s[i])
+
+		}
+
 	}
 
 	return result
