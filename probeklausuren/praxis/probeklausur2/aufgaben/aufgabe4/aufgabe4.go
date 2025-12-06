@@ -16,7 +16,7 @@ func ElementSums(l1, l2 []int) []int {
 	result := []int{}
 	// TODO
 
-	if len(l1) == 0 {
+	/*if len(l1) == 0 {
 		return l2
 	}
 
@@ -55,6 +55,25 @@ func ElementSums(l1, l2 []int) []int {
 	for i := 0; i < len(l1); i++ {
 		sum := l1[i] + l2[i]
 		result = append(result, sum)
+	}*/
+
+	max := len(l1)
+	if max < len(l2) {
+		max = len(l2)
+	}
+
+	current1 := 0
+	current2 := 0
+	for i := 0; i < max; i++ {
+		if i < len(l1) {
+			current1 = l1[i]
+		}
+
+		if i < len(l2) {
+			current2 = l2[i]
+		}
+
+		result = append(result, (current1 + current2))
 	}
 
 	return result
